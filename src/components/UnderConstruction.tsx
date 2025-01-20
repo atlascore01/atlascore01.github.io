@@ -5,13 +5,11 @@ import { motion } from "framer-motion"
 export default function UnderConstruction() {
     return (
         <div className="fixed inset-0 flex items-start justify-center bg-gray-900 bg-opacity-75 z-50">
-            {/* Video de fondo */}
-            <video
-                className="absolute inset-0 w-full h-full object-cover opacity-50"
-                src="/background.mp4" // Asegúrate de que la ruta sea correcta
-                autoPlay
-                loop
-                muted
+            {/* Imagen de fondo */}
+            <img
+                className="absolute inset-0 w-full h-full object-cover opacity-90"
+                src="/background.jpg" // Nueva imagen de fondo
+                alt="Fondo de construcción"
             />
             <div className="text-center w-full relative z-10">
                 <motion.div
