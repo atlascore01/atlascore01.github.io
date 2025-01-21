@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export default function UnderConstruction() {
     return (
-        <div className="fixed inset-0 flex items-start justify-center bg-gradient-to-bl from-green-600 to-indigo-600 bg-opacity-75 z-50">
+        <div className="fixed inset-0 flex items-start justify-center bg-gradient-to-bl from-atlascorePrimario to-atlascoreSecundario bg-opacity-75 z-50">
             {/* 
             Imagen de fondo 
             <img
