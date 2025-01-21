@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'atlascorePrimario': '#054208'
+        'atlascorePrimario': '#8BD990',
+        'atlascoreSecundario': '#4B4BA1'
       }
     },
   },
