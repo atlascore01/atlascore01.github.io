@@ -65,9 +65,9 @@ export default function UnderConstruction() {
                         transition={{ repeat: Infinity, duration: 2 }}
                     >
                         <img
-                            src="/logo-white.png"
+                            src="/logotipo-white.png"
                             alt="Logo"
-                            className="w-32 h-32"
+                            className="w-48 h-auto"
                         />
                     </motion.div>
                 </div>
