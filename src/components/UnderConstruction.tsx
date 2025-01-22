@@ -4,15 +4,7 @@ import { motion } from "framer-motion"
 
 export default function UnderConstruction() {
     return (
-        <div className="fixed inset-0 flex items-start justify-center bg-gradient-to-bl from-atlascorePrimario to-atlascoreSecundario bg-opacity-75 z-50">
-            {/* 
-            Imagen de fondo 
-            <img
-                className="absolute inset-0 w-full h-full object-cover opacity-90"
-                src="/background.jpg" // Nueva imagen de fondo
-                alt="Fondo de construcción"
-            />
-            */}
+        <div className="flex items-start justify-center bg-gradient-to-bl from-atlascorePrimario to-atlascoreSecundario bg-opacity-75 z-50">
             <div className="text-center w-full relative z-10">
                 <motion.div
                     className="w-full h-16 mb-8 relative overflow-hidden"
@@ -59,6 +51,17 @@ export default function UnderConstruction() {
                     >
                         Estamos preparando todo, nos vemos pronto ...
                     </motion.p>
+                    <motion.div
+                        className="mt-8 inline-block"
+                    >
+                        <a
+                            href="/"
+                            className="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-full hover:bg-yellow-400 transition-colors duration-300"
+                        >
+                            Volver a la página principal
+                        </a>
+                    </motion.div>
+
                     <motion.div
                         className="flex justify-center items-center h-fit py-32"
                         animate={{ scale: [1, 1.05, 1] }}
