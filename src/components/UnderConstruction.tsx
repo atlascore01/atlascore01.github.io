@@ -61,16 +61,13 @@ export default function UnderConstruction() {
                             Volver a la página principal
                         </a>
                     </motion.div>
-
                     <motion.div
-                        className="flex justify-center items-center h-fit py-32"
-                        animate={{ scale: [1, 1.05, 1] }}
-                        transition={{ repeat: Infinity, duration: 2 }}
-                    >
+                        className="flex justify-center items-center h-fit py-28 overflow-hidden"
+                        >
                         <img
                             src="/logotipo-white.png"
                             alt="Logo"
-                            className="w-48 h-auto"
+                            className="w-full h-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
                         />
                     </motion.div>
                 </div>
