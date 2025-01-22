@@ -10,6 +10,9 @@ export default {
         'atlascorePrimario': '#8BD990',
         'atlascoreSecundario': '#4B4BA1',
         'atlascoreDark': '#023A40'
+      },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif']
       }
     },
   },
