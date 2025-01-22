@@ -10,7 +10,7 @@ export default function Navbar() {
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-white">
-            <img src="/logo-white.png" alt="Mi Sitio Logo" className="h-8 pl-2" />
+            <img src="/logo-full-white.png" alt="Mi Sitio Logo" className="h-8 pl-2" />
           </Link>
           
           {/* Botón menú hamburguesa */}
