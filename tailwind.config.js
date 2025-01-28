@@ -12,7 +12,8 @@ export default {
         'atlascoreDark': '#023A40'
       },
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif']
+        'tech': ['Audiowide', 'sans-serif'],
+        'sans': ['Inter', 'sans-serif'],
       }
     },
   },
