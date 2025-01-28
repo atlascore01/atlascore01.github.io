@@ -2,7 +2,7 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}"
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -12,8 +12,9 @@ export default {
         'atlascoreDark': '#023A40'
       },
       fontFamily: {
-        'tech': ['Audiowide', 'sans-serif'],
-        'sans': ['Inter', 'sans-serif'],
+        'display': ['Syne', 'sans-serif'],         // Para títulos principales
+        'tech': ['Chakra Petch', 'sans-serif'],    // Para subtítulos técnicos
+        'sans': ['Space Grotesk', 'sans-serif'],   // Para texto general
       }
     },
   },

@@ -151,10 +151,10 @@ export default function Home() {
                                     </span>
                                 </h2>
                             </div>
-                            <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
-                                AtlasCore impulsa la evolución digital de empresas visionarias, 
-                                combinando innovación tecnológica con estrategias personalizadas 
-                                para un crecimiento exponencial.
+                            <p className="font-tech text-gray-300 text-lg md:text-xl leading-relaxed">
+                                AtlasCore impulsa la evolución digital en organizaciones de diversas escalas e industrias, 
+                                combinando innovación tecnológica con estrategias personalizadas
+                                para un crecimiento exponencial, escalable, sostenible y a medida de cada cliente según su necesidad.
                             </p>
                         </motion.div>
                     </div>
@@ -165,7 +165,7 @@ export default function Home() {
                     <motion.h2 
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-white"
+                        className="font-tech text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center text-white"
                     >
                         Nuestras Soluciones
                     </motion.h2>
@@ -179,15 +179,15 @@ export default function Home() {
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className="group"
                             >
-                                <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-atlascorePrimario/10 to-atlascoreSecundario/5 backdrop-blur-lg 
+                                <div className="font-tech h-full p-8 rounded-2xl bg-gradient-to-br from-atlascorePrimario/10 to-atlascoreSecundario/5 backdrop-blur-lg 
                                     border border-atlascorePrimario/20 hover:border-atlascorePrimario/30 transition-all duration-300
                                     shadow-lg hover:shadow-2xl hover:-translate-y-1"
                                 >
                                     {service.icon}
-                                    <h3 className="text-2xl font-semibold mb-4 text-white group-hover:text-atlascorePrimario transition-colors">
+                                    <h3 className="font-tech text-2xl font-semibold mb-4 text-white group-hover:text-atlascorePrimario transition-colors">
                                         {service.title}
                                     </h3>
-                                    <p className="text-gray-300 leading-relaxed">
+                                    <p className="font-tech text-gray-300 leading-relaxed">
                                         {service.description}
                                     </p>
                                 </div>
@@ -214,7 +214,8 @@ const services = [
         description: "Optimización de procesos mediante tecnologías avanzadas de automatización y IA.",
         icon: <div className="w-12 h-12 mb-6 text-atlascoreSecundario">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
         </div>
     },
@@ -224,6 +225,34 @@ const services = [
         icon: <div className="w-12 h-12 mb-6 text-atlascorePrimario">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+        </div>
+    },
+    {
+        title: "Administración de Infraestructura",
+        description: "Gestión integral y optimización de infraestructura tecnológica para garantizar la máxima disponibilidad, seguridad y rendimiento de los sistemas.",
+        icon: <div className="w-12 h-12 mb-6 text-atlascorePrimario">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+            </svg>
+        </div>
+    },
+    {
+        title: "Monitoreo y Análisis",
+        description: "Supervisión continua y análisis en tiempo real de sistemas críticos para prevenir incidentes y optimizar el rendimiento de tu infraestructura tecnológica.",
+        icon: <div className="w-12 h-12 mb-6 text-atlascoreSecundario">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+        </div>
+    },
+    {
+        title: "ETL y Business Intelligence",
+        description: "Transformamos datos en conocimiento mediante procesos de Extracción, Transformación y Carga (ETL), facilitando la toma de decisiones estratégicas basadas en datos.",
+        icon: <div className="w-12 h-12 mb-6 text-atlascorePrimario">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
             </svg>
         </div>
     }
