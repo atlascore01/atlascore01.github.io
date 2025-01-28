@@ -1,13 +1,117 @@
-import Parallax from "./Parallax";
 import { motion } from "framer-motion";
+import { useCallback } from "react";
+import { loadSlim } from "tsparticles-slim";
+import type { Container, Engine } from "tsparticles-engine";
+import Particles from "react-tsparticles";
 
 export default function Home() {
+    const particlesInit = useCallback(async (engine: Engine) => {
+        await loadSlim(engine);
+    }, []);
+
+    const particlesLoaded = useCallback(async (container: Container | undefined) => {
+        console.log("Particles container loaded", container);
+    }, []);
+
     return (
         <article className="min-h-screen">
-            <Parallax>
                 {/* Hero Section */}
                 <section className="h-screen flex flex-col justify-center items-center relative overflow-hidden">
+                    <Particles
+                        id="tsparticles"
+                        init={particlesInit}
+                        loaded={particlesLoaded}
+                        options={{
+                            background: {
+                                opacity: 0
+                            },
+                            fpsLimit: 120,
+                            interactivity: {
+                                events: {
+                                    onHover: {
+                                        enable: true,
+                                        mode: "repulse"
+                                    }
+                                },
+                                modes: {
+                                    repulse: {
+                                        distance: 100,
+                                        duration: 0.4
+                                    }
+                                }
+                            },
+                            particles: {
+                                color: {
+                                    value: "#8BD990"
+                                },
+                                links: {
+                                    color: "#4B4BA1",
+                                    distance: 150,
+                                    enable: true,
+                                    opacity: 0.5,
+                                    width: 1
+                                },
+                                move: {
+                                    direction: "none",
+                                    enable: true,
+                                    outModes: {
+                                        default: "bounce"
+                                    },
+                                    random: false,
+                                    speed: 1,
+                                    straight: false
+                                },
+                                number: {
+                                    density: {
+                                        enable: true,
+                                        area: 800
+                                    },
+                                    value: 80
+                                },
+                                opacity: {
+                                    value: 0.5
+                                },
+                                shape: {
+                                    type: "circle"
+                                },
+                                size: {
+                                    value: { min: 1, max: 5 }
+                                }
+                            },
+                            detectRetina: true
+                        }}
+                    />
                     <div className="absolute inset-0 bg-gradient-to-br from-atlascoreDark via-atlascorePrimario/30 to-transparent opacity-80" />
+                    <div className="absolute inset-0 overflow-hidden">
+                        <motion.div
+                            className="absolute w-72 h-72 bg-atlascorePrimario/10 rounded-full blur-3xl"
+                            animate={{
+                                x: [0, 100, 0],
+                                y: [0, -100, 0],
+                                scale: [1, 1.2, 1],
+                            }}
+                            transition={{
+                                duration: 15,
+                                repeat: Infinity,
+                                ease: "easeInOut"
+                            }}
+                            style={{ top: '20%', left: '10%' }}
+                        />
+                        <motion.div
+                            className="absolute w-96 h-96 bg-atlascoreSecundario/10 rounded-full blur-3xl"
+                            animate={{
+                                x: [0, -150, 0],
+                                y: [0, 100, 0],
+                                scale: [1, 1.3, 1],
+                            }}
+                            transition={{
+                                duration: 18,
+                                repeat: Infinity,
+                                ease: "easeInOut"
+                            }}
+                            style={{ bottom: '10%', right: '15%' }}
+                        />
+                    </div>
                     
                     <motion.div 
                         initial={{ opacity: 0, y: 20 }}
@@ -20,12 +124,6 @@ export default function Home() {
                             alt="Logotipo"
                             className="w-3/5 max-w-xl hover:scale-105 transition-transform duration-300"
                         />
-                        <h1 className="text-white font-bold text-2xl md:text-3xl lg:text-5xl max-w-3xl text-center leading-tight">
-                            Innovación Digital para la 
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-atlascorePrimario via-white to-atlascoreSecundario font-extrabold">
-                                {" "}Nueva Era Empresarial
-                            </span>
-                        </h1>
                     </motion.div>
                 </section>
 
@@ -39,9 +137,20 @@ export default function Home() {
                             transition={{ duration: 0.6 }}
                             className="max-w-4xl mx-auto text-center"
                         >
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-atlascorePrimario via-atlascoreSecundario to-atlascorePrimario text-transparent bg-clip-text">
-                                Transformamos el Futuro Digital
-                            </h2>
+                            <div className="relative">
+                                <h2 className="font-tech text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
+                                    <span className="relative">
+                                        <span className="absolute -inset-1 blur-xl bg-gradient-to-r from-atlascorePrimario to-atlascoreSecundario opacity-30"></span>
+                                        <span className="relative text-white">Transformamos el</span>
+                                    </span>
+                                    {" "}
+                                    <span className="relative">
+                                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-atlascorePrimario to-atlascoreSecundario font-extrabold">
+                                            Futuro Digital
+                                        </span>
+                                    </span>
+                                </h2>
+                            </div>
                             <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
                                 AtlasCore impulsa la evolución digital de empresas visionarias, 
                                 combinando innovación tecnológica con estrategias personalizadas 
@@ -86,7 +195,6 @@ export default function Home() {
                         ))}
                     </div>
                 </section>
-            </Parallax>
         </article>
     );
 }
