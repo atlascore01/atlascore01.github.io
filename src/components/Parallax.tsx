@@ -16,10 +16,10 @@ import {
   
     // motion stuff
     const { scrollYProgress } = useScroll({ target });
-    const y = useTransform(scrollYProgress, [0, 1], ['0%', '70%']);
+    const y = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
     // scale
-    const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
-    const scale2 = useSpring(useTransform(scrollYProgress, [0, 1], [0.8, 1]));
+    const scale = useTransform(scrollYProgress, [0, 1], [1, 0.9]);
+    const scale2 = useSpring(useTransform(scrollYProgress, [0, 1], [0.9, 1]));
     const opacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
   
     // debug
