@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import UnderConstruction from "./components/UnderConstruction"
 import Navbar from "./components/Navbar"
 import Home from './components/Home2';
+import Services from './components/Services';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/services" element={<UnderConstruction />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<UnderConstruction />} />
           </Routes>
         </div>
