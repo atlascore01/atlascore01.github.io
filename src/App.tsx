@@ -9,6 +9,7 @@ import UnderConstruction from "./components/UnderConstruction"
 import Navbar from "./components/Navbar"
 import Home from './components/Home2';
 import Services from './components/Services';
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<UnderConstruction />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </Router>
