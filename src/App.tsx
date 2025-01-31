@@ -6,7 +6,7 @@ import "@fontsource/outfit/700.css";  // Bold
 import "@fontsource/inter/400.css";   // Para textos regulares
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar"
-import Home from './components/Home2';
+import Home from './components/Home';
 import Services from './components/Services';
 import Contact from "./components/Contact";
 
