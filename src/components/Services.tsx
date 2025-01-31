@@ -19,10 +19,10 @@ export default function Services() {
                     className="text-center mb-20"
                 >
                     <h1 className="font-tech text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                        Servicios Detallados
+                        Conocé los detalles de nuestros servicios
                     </h1>
                     <p className="font-tech text-gray-300 text-lg md:text-xl max-w-3xl mx-auto">
-                        Descubre cómo nuestros servicios pueden transformar tu negocio con soluciones tecnológicas avanzadas y personalizadas.
+                        Te invitamos a descubrir cómo nuestros servicios pueden transformar tu negocio con soluciones tecnológicas avanzadas y personalizadas.
                     </p>
                 </motion.div>
 
