@@ -11,7 +11,7 @@ export default function Contact() {
     }, [])
 
     return (
-        <article className="min-h-screen bg-atlascoreDark">
+        <article className="min-h-screen bg-gradient-to-bl from-atlascoreDark to-atlascoreSecundario">
             <section className="container mx-auto px-4 py-24">
                 {/* Header */}
                 <motion.div
