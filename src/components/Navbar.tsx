@@ -27,15 +27,15 @@ export default function Navbar() {
 
           {/* Menú desktop */}
           <div className="hidden lg:flex space-x-6">
-            <Link to="/" className="text-white hover:text-atlascoreSecundario flex items-center gap-2">
+            <Link to="/" className="font-tech text-white hover:text-atlascoreSecundario flex items-center gap-2">
               <HomeIcon className="h-5 w-5" />
               <span>Inicio</span>
             </Link>
-            <Link to="/services" className="text-white hover:text-atlascoreSecundario flex items-center gap-2">
+            <Link to="/services" className="font-tech text-white hover:text-atlascoreSecundario flex items-center gap-2">
               <WrenchIcon className="h-5 w-5" />
               <span>Servicios</span>
             </Link>
-            <Link to="/contact" className="text-white hover:text-atlascoreSecundario flex items-center gap-2">
+            <Link to="/contact" className="font-tech text-white hover:text-atlascoreSecundario flex items-center gap-2">
               <EnvelopeIcon className="h-5 w-5" />
               <span>Contacto</span>
             </Link>
