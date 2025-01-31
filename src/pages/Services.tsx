@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import {detailedServices } from "../utils/data"
+import { Services } from "../utils/data"
 
-export default function Services() {
+export default function ServicesSection() {
     return (
-        <article className="min-h-screen bg-atlascoreDark">
+        <article className="min-h-screen bg-gradient-to-bl from-atlascoreDark to-atlascoreSecundario ">
             <section className="container mx-auto px-4 py-24">
                 {/* Header */}
                 <motion.div
@@ -20,7 +20,7 @@ export default function Services() {
                 </motion.div>
 
                 {/* Servicios Detallados */}
-                {detailedServices.map((service, index) => (
+                {Services.map((service, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ export default function Services() {
                                             <img 
                                                 src={service.icon} 
                                                 alt={`Icono ${service.title}`}
-                                                className="w-16 h-16 object-contain text-atlascorePrimario"
+                                                className="w-16 h-16 object-contain"
                                             />
                                         </span>
                                     </div>

@@ -7,18 +7,18 @@ import "@fontsource/inter/400.css";   // Para textos regulares
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar"
 import Home from './pages/Home';
-import Services from './pages/Services';
+import ServiceSection from './pages/Services';
 import Contact from "./pages/Contact";
 
 function App() {
   return (
     <div className="font-poppins">
       <Router>
-        <div className='min-h-screen bg-gradient-to-bl from-atlascorePrimario to-atlascoreSecundario '>
+        <div className="min-h-screen bg-atlascoreDark/80">
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
+            <Route path="/services" element={<ServiceSection/>} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
