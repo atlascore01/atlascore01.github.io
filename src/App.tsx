@@ -5,7 +5,6 @@ import "@fontsource/outfit/600.css";  // SemiBold
 import "@fontsource/outfit/700.css";  // Bold
 import "@fontsource/inter/400.css";   // Para textos regulares
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import UnderConstruction from "./components/UnderConstruction"
 import Navbar from "./components/Navbar"
 import Home from './components/Home2';
 import Services from './components/Services';
