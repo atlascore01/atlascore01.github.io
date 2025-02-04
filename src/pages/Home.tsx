@@ -181,22 +181,23 @@ export default function Home() {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="group"
                         >
-                            <div className="font-tech h-full p-8 rounded-2xl bg-gradient-to-br from-atlascorePrimario/10 to-atlascoreSecundario/5 backdrop-blur-lg 
-                                    border border-atlascorePrimario/20 hover:border-atlascorePrimario/30 transition-all duration-300
-                                    shadow-lg hover:shadow-2xl hover:-translate-y-1"
-                            >
-                                <img
-                                    src={service.icon}
-                                    alt={`Icono ${service.title}`}
-                                    className="w-12 h-14 object-contain"
-                                />
-                                <h3 className="font-tech text-2xl font-semibold mb-4 text-white group-hover:text-atlascorePrimario transition-colors">
-                                    {service.title}
-                                </h3>
-                                <p className="font-tech text-gray-300 leading-relaxed">
-                                    {service.description}
-                                </p>
-                            </div>
+                            <a href={`/services#${service.id}`} className="block h-full">
+                                <div className="font-tech h-full p-8 rounded-2xl bg-gradient-to-br from-atlascorePrimario/10 to-atlascoreSecundario/5 backdrop-blur-lg 
+                                        border border-atlascorePrimario/20 hover:border-atlascorePrimario/30 transition-all duration-300
+                                        shadow-lg hover:shadow-2xl hover:-translate-y-1">
+                                    <img
+                                        src={service.icon}
+                                        alt={`Icono ${service.title}`}
+                                        className="w-12 h-14 object-contain"
+                                    />
+                                    <h3 className="font-tech text-2xl font-semibold mb-4 text-white group-hover:text-atlascorePrimario transition-colors">
+                                        {service.title}
+                                    </h3>
+                                    <p className="font-tech text-gray-300 leading-relaxed">
+                                        {service.description}
+                                    </p>
+                                </div>
+                            </a>
                         </motion.div>
                     ))}
                 </div>

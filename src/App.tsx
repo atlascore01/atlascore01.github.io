@@ -9,7 +9,8 @@ import Navbar from "./components/Navbar"
 import Home from './pages/Home';
 import ServiceSection from './pages/Services';
 import Contact from "./pages/Contact";
-
+import Footer from "./components/Footer";
+import About from "./pages/About";
 function App() {
   return (
     <div className="font-poppins">
@@ -18,9 +19,11 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/services" element={<ServiceSection/>} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          <Footer />
         </div>
       </Router>
     </div>
@@ -28,3 +31,4 @@ function App() {
 }
 
 export default App
+

@@ -1,7 +1,15 @@
-import { Service } from "../types/index"
+export interface Service {
+    id: string;
+    title: string;
+    description: string;
+    icon: string;
+    features: string[];
+    benefits: string[];
+}
 
 export const Services: Service[] = [
     {
+        id: 'consultoria-tecnologica',
         title: "Consultoría Tecnológica",
         description: "Asesoramiento estratégico para optimizar y transformar tu infraestructura tecnológica.",
         icon: "/icons/contec.svg",
@@ -19,6 +27,7 @@ export const Services: Service[] = [
         ]
     },
     {
+        id: 'automatizacion-inteligente',
         title: "Automatización Inteligente",
         description: "Optimización de procesos mediante tecnologías avanzadas de automatización e IA.",
         icon: "/icons/autint.svg",
@@ -36,6 +45,7 @@ export const Services: Service[] = [
         ]
     },
     {
+        id: 'desarrollo-medida',
         title: "Desarrollo a Medida",
         description: "Creación de soluciones tecnológicas adaptadas perfectamente a tus necesidades específicas.",
         icon: "icons/desmed.svg",
@@ -53,6 +63,7 @@ export const Services: Service[] = [
         ]
     },
     {
+        id: 'administracion-infraestructura',
         title: "Administración de Infraestructura",
         description: "Gestión integral y optimización de infraestructura tecnológica para máximo rendimiento.",
         icon: "icons/admininfra.svg"
@@ -71,6 +82,7 @@ export const Services: Service[] = [
         ]
     },
     {
+        id: 'monitoreo-analisis',
         title: "Monitoreo y Análisis",
         description: "Supervisión continua y análisis en tiempo real de sistemas críticos.",
         icon: "icons/monanalisis.svg",
@@ -88,6 +100,7 @@ export const Services: Service[] = [
         ]
     },
     {
+        id: 'etl-business-intelligence',
         title: "ETL y Business Intelligence",
         description: "Transformamos datos en conocimiento mediante procesos ETL y análisis avanzado.",
         icon: "icons/etlbi.svg",

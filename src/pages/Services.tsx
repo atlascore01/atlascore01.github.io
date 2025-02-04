@@ -1,7 +1,20 @@
+import React, { useEffect } from 'react';
 import { motion } from "framer-motion";
 import { Services } from "../utils/data"
 
-export default function ServicesSection() {
+const ServiceSection: React.FC = () => {
+    useEffect(() => {
+        const hash = window.location.hash;
+        if (hash) {
+            setTimeout(() => {
+                const element = document.querySelector(hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }, 500);
+        }
+    }, []);
+
     return (
         <article className="min-h-screen bg-gradient-to-bl from-atlascoreDark to-atlascoreSecundario ">
             <section className="container mx-auto px-4 py-24">
@@ -23,10 +36,12 @@ export default function ServicesSection() {
                 {Services.map((service, index) => (
                     <motion.div
                         key={index}
+                        id={service.id}
+                        className="mb-12"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.2 }}
-                        className="mb-20 last:mb-0"
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
                     >
                         <div className="bg-gradient-to-br from-atlascorePrimario/10 to-atlascoreSecundario/5 backdrop-blur-lg 
                             border border-atlascorePrimario/20 rounded-2xl p-8 md:p-12"
@@ -89,4 +104,6 @@ export default function ServicesSection() {
         </article>
     );
 }
+
+export default ServiceSection;
 
