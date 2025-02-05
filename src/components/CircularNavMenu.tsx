@@ -97,7 +97,7 @@ const CircularNavMenu: React.FC = () => {
 const NavLink: React.FC<{ href: string; icon: React.ReactNode; text: string }> = ({ href, icon, text }) => (
   <Link 
     to={href} 
-    className="font-tech hover:text-[#e8e4e6] flex items-center gap-2 relative group transition-all duration-300"
+    className="font-tech text-white hover:text-[#e8e4e6] flex items-center gap-2 relative group transition-all duration-300"
   >
     {icon}
     <span className="transition-all duration-300 group-hover:translate-x-1">{text}</span>
