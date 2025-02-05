@@ -154,7 +154,7 @@ export default function Home() {
                             </h2>
                         </div>
                         <p className="font-tech text-gray-300 text-lg md:text-xl leading-relaxed">
-                            AtlasCore impulsa la evolución digital en organizaciones de diversas escalas e industrias,
+                            Atlascore impulsa la evolución digital en organizaciones de diversas escalas e industrias,
                             combinando innovación tecnológica con estrategias personalizadas
                             para un crecimiento exponencial, escalable, sostenible y a medida de cada cliente según su necesidad.
                         </p>
