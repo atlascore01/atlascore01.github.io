@@ -1,7 +1,6 @@
 import { MotionTransition } from "./TransitionComponents"
 import { Link } from 'react-router-dom';
 import { HomeIcon, WrenchIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
-import { AnimatedHamburgerButton } from "./HamburgerButton";
 import { useState, useEffect } from 'react';
 
 
@@ -41,7 +40,6 @@ export default function NavBarHamburger() {
 
                         {/* Botón menú hamburguesa */}
                         <button className="lg:hidden text-white z-50" onClick={() => setIsOpen(!isOpen)}>
-                            <AnimatedHamburgerButton isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} />
                         </button>
 
 

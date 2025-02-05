@@ -1,6 +1,16 @@
 import { MotionConfig, motion } from "framer-motion";
 
-export const AnimatedHamburgerButton = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => {
+interface HamburgerButtonProps {
+  isOpen: boolean
+  toggle: () => void
+  className?: string
+}
+
+export const AnimatedHamburgerButton: React.FC<HamburgerButtonProps> = ({ 
+  isOpen, 
+  toggle,
+  className
+}) => {
   return (
     <MotionConfig
       transition={{
@@ -12,7 +22,7 @@ export const AnimatedHamburgerButton = ({ isOpen, toggle }: { isOpen: boolean; t
         initial={false}
         animate={isOpen ? "open" : "closed"}
         onClick={toggle}
-        className="relative h-10 w-10 rounded-full bg-white/0 transition-colors hover:bg-white/20"
+        className={`${className} relative h-10 w-10 rounded-full bg-white/0 transition-colors hover:bg-white/20 focus:outline-none`}
       >
         <motion.span
           variants={VARIANTS.top}

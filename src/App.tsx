@@ -10,7 +10,7 @@ import ServiceSection from './pages/Services';
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import About from "./pages/About";
-import NavBarHamburger from "./components/NavBarHamburger";
+import CircularNavMenu from "./components/CircularNavMenu";
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
     <div className="font-poppins">
       <Router>
         <div className="min-h-screen bg-atlascoreDark/80">
-          <NavBarHamburger />
+          <CircularNavMenu />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
