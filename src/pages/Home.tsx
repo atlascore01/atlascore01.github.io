@@ -215,7 +215,7 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="mt-16"
             >
-                <h2 className="font-tech text-2xl md:text-3xl font-bold mb-8 text-center">Stack Tecnológico</h2>
+                <h2 className="font-tech text-2xl md:text-3xl font-bold mb-8 text-center text-white">Stack Tecnológico</h2>
                 <p className="text-lg text-gray-300 text-center mb-12">
                     Tecnologías y herramientas que utilizamos para desarrollar soluciones innovadoras
                 </p>
@@ -325,8 +325,8 @@ export default function Home() {
                                         className="max-w-full max-h-full object-contain"
                                     />
                                 </div>
-                                <h3 className="font-tech text-lg font-bold mb-2">{tech.name}</h3>
-                                <p className="text-gray-300 text-sm">{tech.description}</p>
+                                <h3 className="font-tech text-lg font-bold mb-2 text-white">{tech.name}</h3>
+                                <p className="text-white text-sm">{tech.description}</p>
                             </motion.div>
                         </SwiperSlide>
                     ))}
