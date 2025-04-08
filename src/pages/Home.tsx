@@ -10,6 +10,7 @@ import 'swiper/css/pagination';
 
 
 import { Services } from "../utils/data"
+import GradientText from "../components/GradientText";
 
 export default function Home() {
     const particlesInit = useCallback(async (engine: Engine) => {
@@ -144,7 +145,18 @@ export default function Home() {
                         transition={{ duration: 0.6 }}
                         className="max-w-4xl mx-auto text-center"
                     >
-                        <div className="relative">
+                        <GradientText
+                            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                            animationSpeed={10}
+                            showBorder={false}
+                            className="custom-class"
+                        >
+                            <h2 className="font-tech text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
+                                Transformamos el Futuro Digital
+                            </h2>
+                        </GradientText>
+                        {/**
+                         * <div className="relative">
                             <h2 className="font-tech text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
                                 <span className="relative">
                                     <span className="absolute -inset-1 blur-xl bg-gradient-to-r from-atlascorePrimario to-atlascoreSecundario opacity-30"></span>
@@ -158,6 +170,8 @@ export default function Home() {
                                 </span>
                             </h2>
                         </div>
+                         */}
+
                         <p className="font-tech text-gray-300 text-lg md:text-xl leading-relaxed">
                             Atlascore impulsa la evolución digital en organizaciones de diversas escalas e industrias,
                             combinando innovación tecnológica con estrategias personalizadas
