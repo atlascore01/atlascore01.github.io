@@ -146,7 +146,7 @@ export default function Home() {
                         className="max-w-4xl mx-auto text-center"
                     >
                         <GradientText
-                            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                            colors={["#40ffaa", "#b8f0d6", "#40ffaa", "#4079ff", "#40ffaa"]}
                             animationSpeed={10}
                             showBorder={false}
                             className="custom-class"
