@@ -158,12 +158,12 @@ export default function ContactForm() {
                 {...register("service", { required: "Por favor selecciona un servicio" })}
               >
                 <option value="">Selecciona un servicio</option>
-                <option value="desarrollo-web">Consultoría Tecnológica</option>
-                <option value="diseno-grafico">Automatización Inteligente</option>
-                <option value="marketing-digital">Desarrollo a Medida</option>
-                <option value="consultoria-tecnica">Administración de Infraestructura</option>
-                <option value="soporte-tecnico">Monitoreo y Análisis</option>
-                <option value="mantenimiento">ETL y Business Intelligence</option>
+                <option value="Consultoría Tecnológica">Consultoría Tecnológica</option>
+                <option value="Automatización Inteligente">Automatización Inteligente</option>
+                <option value="Desarrollo a Medida">Desarrollo a Medida</option>
+                <option value="Administración de Infraestructura">Administración de Infraestructura</option>
+                <option value="Monitoreo y Análisis">Monitoreo y Análisis</option>
+                <option value="ETL y Business Intelligence">ETL y Business Intelligence</option>
               </select>
               {errors.service && <p className="mt-1 text-sm text-red-600">{errors.service.message}</p>}
             </div>
