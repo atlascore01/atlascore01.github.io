@@ -6,8 +6,9 @@ import useWeb3Forms from "@web3forms/react";
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { ArrowPathIcon } from "@heroicons/react/24/outline"
-import { CheckCircleIcon, ExclamationCircleIcon } from "@heroicons/react/24/solid"
+import { ExclamationCircleIcon } from "@heroicons/react/24/solid"
 import { motion, AnimatePresence } from "framer-motion";
+import Swal from 'sweetalert2'
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "El nombre debe tener al menos 2 caracteres" }),
@@ -25,7 +26,6 @@ export default function ContactForm() {
     message: string
   } | null>(null)
 
-  // Inicializar react-hook-form
   const {
     register,
     handleSubmit,
@@ -43,7 +43,6 @@ export default function ContactForm() {
   })
 
 
-  // Manejar el envío del formulario
   const { submit: onSubmit } = useWeb3Forms({
     access_key: import.meta.env.VITE_ACCESS_KEY_EMAIL,
     settings: {
@@ -53,10 +52,14 @@ export default function ContactForm() {
     onSuccess: () => {
       setIsSubmitting(true)
       setTimeout(() => {
-        setFormResponse({
-          type: "success",
-          message: "¡Gracias! Tu mensaje ha sido enviado correctamente.",
-        })
+        Swal.fire({
+          title: "¡Mensaje enviado!",
+          text: "Tu mensaje ha sido enviado correctamente.",
+          icon: "success",
+          draggable: true,
+          confirmButtonColor: '#2563eb'
+        });
+
         reset()
         setIsSubmitting(false)
       }, 2000)
@@ -76,19 +79,15 @@ export default function ContactForm() {
   return (
     <div className="container mx-auto px-4 py-12 text-center">
       <AnimatePresence>
-        {formResponse?.type === "success" && (
+        {formResponse?.type === "error" && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed top-5 right-5 bg-green-100 border border-green-300 text-green-800 rounded-lg shadow-lg p-4 flex items-center gap-2"
+            className="fixed top-5 right-5 bg-red-100 border border-red-300 text-red-800 rounded-lg shadow-lg p-4 flex items-center gap-2"
           >
-            {formResponse.type === "success" ? (
-              <CheckCircleIcon className="h-5 w-5 text-green-500" />
-            ) : (
-              <ExclamationCircleIcon className="h-5 w-5 text-red-500" />
-            )}
-            <p className={`text-sm ${formResponse.type === "success" ? "text-green-700" : "text-red-700"}`}>
+            <ExclamationCircleIcon className="h-5 w-5 text-red-500" />
+            <p className="text-sm text-red-700">
               {formResponse.message}
             </p>
           </motion.div>
